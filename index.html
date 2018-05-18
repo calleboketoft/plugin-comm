@@ -1,8 +1,18 @@
 <html>
   <head>
-    <script src="index.js"></script>
+    <script src="./node_modules/systemjs/dist/system.js"></script>
   </head>
   <body>
-
+    <script>
+      System.config({
+        baseURL: '/',
+        packages: {
+          'dist': {defaultExtension: 'js'}
+        }
+      })
+      System.import('./index.js').then(function (pluginComm) {
+        pluginComm.initComms()
+      })
+    </script>
   </body>
 </html>
