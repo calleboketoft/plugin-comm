@@ -1,0 +1,26 @@
+{
+  "name": "plugin-comm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server",
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calleboketoft/plugin-comm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/calleboketoft/plugin-comm/issues"
+  },
+  "homepage": "https://github.com/calleboketoft/plugin-comm#readme",
+  "devDependencies": {
+    "express": "^4.16.3",
+    "typescript": "^2.8.3"
+  }
+}
