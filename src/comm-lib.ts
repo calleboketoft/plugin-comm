@@ -1,1 +1,3 @@
-console.log('apa');
+export function initComms() {
+  console.log('alright');
+}
