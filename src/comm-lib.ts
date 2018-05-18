@@ -1,1 +1,1 @@
-console.log("apa");
+console.log('apa');
