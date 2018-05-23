@@ -10,7 +10,7 @@
     "noImplicitAny": false,
     "outDir": "dist"
   },
-  "files": ["src/comm-lib.ts"],
+  "files": ["src/plugin-comm.ts"],
   "exclude": [
     "node_modules"
   ]

@@ -4,4 +4,4 @@ function initComms() {
     console.log('alright');
 }
 exports.initComms = initComms;
-//# sourceMappingURL=comm-lib.js.map
+//# sourceMappingURL=plugin-comm.js.map
