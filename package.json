@@ -2,7 +2,7 @@
   "name": "plugin-comm",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/plugin-comm.js",
   "scripts": {
     "start": "node server",
     "build": "tsc",
