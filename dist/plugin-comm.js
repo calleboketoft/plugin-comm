@@ -16,6 +16,10 @@ var pluginComm = {
     pluginRegisterDataCallback: function (pluginName, cb) {
         var uniqueId = pluginName + ':' + makeUUID();
         this.pluginsCallbacks[uniqueId] = cb;
+        this.pluginSendDataToPlatform({
+            type: '[plugin-registered]',
+            payload: { pluginId: uniqueId }
+        });
         return uniqueId;
     },
     // Plugins use this method to send data to the platform
