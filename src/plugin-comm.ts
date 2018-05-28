@@ -16,6 +16,10 @@ const pluginComm = {
   pluginRegisterDataCallback: function(pluginName, cb) {
     const uniqueId = pluginName + ':' + makeUUID();
     this.pluginsCallbacks[uniqueId] = cb;
+    this.pluginSendDataToPlatform({
+      type: '[plugin-registered]',
+      payload: { pluginId: uniqueId }
+    });
     return uniqueId;
   },
 
