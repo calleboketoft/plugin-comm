@@ -14,7 +14,7 @@ const pluginComm = {
 
   // Plugins use this method to register their callback method for handling
   // incoming data from platform
-  pluginRegisterDataCallback(pluginName, cb) {
+  pluginRegisterDataCallback: function(pluginName, cb) {
     this.pluginsCallbacks[pluginName] = cb;
   },
 
@@ -24,7 +24,7 @@ const pluginComm = {
   },
 
   // Plugins use this method to unregister their callback method
-  pluginUnregisterDataCallback(pluginName) {
+  pluginUnregisterDataCallback: function(pluginName) {
     delete this.pluginsCallbacks[pluginName];
   },
 
