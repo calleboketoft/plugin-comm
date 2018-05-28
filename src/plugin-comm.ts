@@ -3,7 +3,7 @@
 const pluginComm = {
   // Platform uses this method to register a callback to handle incoming
   // data from plugins
-  platformRegisterDataCallback(cb) {
+  platformRegisterDataCallback: function(cb) {
     this.platformCallback = cb;
   },
 
