@@ -1,14 +1,14 @@
 // This is the API between the platform and the plugins
 const pluginComm = {
-  // Platform uses this method to register a callback to handle incoming
+  // Platform use this method to register a callback to handle incoming
   // data from plugins
   platformRegisterDataCallback: function(cb) {
     this.platformCallback = cb;
   },
 
   // Platform use this method to send data to plugins
-  platformSendDataToPlugin: function(pluginName, dataToPlugin) {
-    this.pluginsCallbacks[pluginName](dataToPlugin);
+  platformSendDataToPlugin: function(pluginId, dataToPlugin) {
+    this.pluginsCallbacks[pluginId](dataToPlugin);
   },
 
   // Plugins use this method to register their callback method for handling
