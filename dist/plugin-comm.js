@@ -30,7 +30,8 @@ var pluginComm = {
     },
     makeUUID: makeUUID,
     pluginsCallbacks: {},
-    platformCallback: null
+    platformCallback: null,
+    pluginsManifest: null
 };
 if (!window['pluginComm']) {
     window['pluginComm'] = pluginComm;

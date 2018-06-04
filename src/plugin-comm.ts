@@ -35,7 +35,9 @@ const pluginComm = {
 
   pluginsCallbacks: {},
 
-  platformCallback: null
+  platformCallback: null,
+
+  pluginsManifest: null
 };
 
 if (!window['pluginComm']) {
