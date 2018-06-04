@@ -13,14 +13,12 @@ const pluginComm = {
 
   // Plugins use this method to register their callback method for handling
   // incoming data from platform
-  pluginRegisterDataCallback(pluginName, cb) {
-    const uniqueId = pluginName + ':' + makeUUID();
-    this.pluginsCallbacks[uniqueId] = cb;
+  pluginRegisterDataCallback(pluginId, cb) {
+    this.pluginsCallbacks[pluginId] = cb;
     this.pluginSendDataToPlatform({
       type: '[plugin-registered]',
-      payload: { pluginId: uniqueId }
+      payload: { pluginId: pluginId }
     });
-    return uniqueId;
   },
 
   // Plugins use this method to send data to the platform
