@@ -30,6 +30,7 @@ var pluginComm = {
     pluginUnregisterDataCallback: function (pluginName) {
         delete this.pluginsCallbacks[pluginName];
     },
+    makeUUID: makeUUID,
     pluginsCallbacks: {},
     platformCallback: null
 };

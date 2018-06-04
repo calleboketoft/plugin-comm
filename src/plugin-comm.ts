@@ -33,6 +33,8 @@ const pluginComm = {
     delete this.pluginsCallbacks[pluginName];
   },
 
+  makeUUID: makeUUID,
+
   pluginsCallbacks: {},
 
   platformCallback: null
