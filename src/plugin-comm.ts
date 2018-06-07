@@ -27,8 +27,12 @@ const pluginComm = {
   },
 
   // Plugins use this method to unregister their callback method
-  pluginUnregisterDataCallback(pluginName) {
-    delete this.pluginsCallbacks[pluginName];
+  pluginUnregisterDataCallback(pluginId) {
+    delete this.pluginsCallbacks[pluginId];
+    this.pluginSendDataToPlatform({
+      type: '[plugin-unregistered]',
+      payload: { pluginId: pluginId }
+    });
   },
 
   makeUUID: makeUUID,
