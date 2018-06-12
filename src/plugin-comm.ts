@@ -26,11 +26,6 @@ const pluginComm = {
   // incoming data from platform
   pluginRegisterDataCallback(pluginId, cb) {
     this.pluginsCallbacks[pluginId] = cb;
-    // Notify platform that a new plugin instance has been registered
-    this.pluginSendDataToPlatform({
-      type: '[plugin-registered]',
-      payload: { pluginId: pluginId }
-    });
   },
 
   // Plugins use this method to send data to the platform
@@ -42,11 +37,6 @@ const pluginComm = {
   // typically done when removing a plugin from the platform DOM
   pluginUnregisterDataCallback(pluginId) {
     delete this.pluginsCallbacks[pluginId];
-    // Notify platform that a plugin instance has been unregistered
-    this.pluginSendDataToPlatform({
-      type: '[plugin-unregistered]',
-      payload: { pluginId: pluginId }
-    });
   },
 
   // Convenience method for the platform to use when generating an unique id for
